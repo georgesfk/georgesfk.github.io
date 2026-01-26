@@ -1,0 +1,6 @@
+title: "Georges FK | DevSecOps Portfolio"
+description: "Portfolio DevSecOps – Kubernetes, CI/CD, Policy as Code, Cloud Security"
+baseurl: "" # laisser vide pour github.io
+url: "https://georgesfk.github.io"
+theme: minima
+markdown: kramdown
