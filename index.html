@@ -8,33 +8,80 @@
 </head>
 <body>
   <header>
-    <h1>Georges FK</h1>
-    <p>Senior DevSecOps Engineer & Consultant</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="articles.html">Articles</a>
-    </nav>
+    <div class="header-container">
+      <h1>Georges FK</h1>
+      <p>Senior DevSecOps Engineer & Consultant</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="articles.html">Articles</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>Welcome to my DevSecOps Portfolio</h2>
-      <p>Discover my projects, articles, and demos related to CI/CD, Kubernetes, Cloud Security, Policy as Code, and DevSecOps best practices.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Building Secure Cloud-Native Platforms & DevSecOps Pipelines</h2>
+      <p>Automation, Policy as Code, Kubernetes Security, Supply Chain Security & CI/CD.</p>
     </section>
 
-    <section>
+    <!-- Projects -->
+    <section id="projects">
       <h2>Featured Projects</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>CI/CD Pipeline Automation</h3>
+          <p>GitHub Actions + Terraform + Kubernetes for automated SAST, DAST, SCA & Secrets scanning.</p>
+        </div>
+        <div class="card">
+          <h3>Kubernetes Security & Policy as Code</h3>
+          <p>OPA / Kyverno policies, RBAC hardening, network isolation & compliance automation.</p>
+        </div>
+        <div class="card">
+          <h3>Supply Chain Security</h3>
+          <p>SBOM generation, Sigstore signing, and SLSA compliance for artifact provenance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles -->
+    <section id="articles">
+      <h2>Articles</h2>
       <ul>
-        <li><a href="projects.html#project1">CI/CD Pipeline Automation</a></li>
-        <li><a href="projects.html#project2">Kubernetes Security & Policy as Code</a></li>
-        <li><a href="projects.html#project3">Supply Chain Security & SBOM</a></li>
+        <li><a href="https://www.linkedin.com/pulse/devsecops-2025-trends-georgesfk">DevSecOps 2025: Trends & Innovations</a></li>
+        <li><a href="https://medium.com/@georgesfk/policy-as-code-opa-kyverno-123456">Policy as Code with OPA & Kyverno</a></li>
+        <li><a href="https://medium.com/@georgesfk/securing-software-supply-chain-789abc">Securing the Software Supply Chain</a></li>
       </ul>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>DevSecOps Skills</h2>
+      <ul class="skills-list">
+        <li>CI/CD Pipelines (GitHub Actions, Jenkins, GitLab CI)</li>
+        <li>Kubernetes Security & Hardening</li>
+        <li>Policy as Code (OPA, Kyverno)</li>
+        <li>Cloud Security (AWS, GCP, Azure)</li>
+        <li>Supply Chain Security (SBOM, Sigstore, SLSA)</li>
+        <li>Infrastructure as Code (Terraform, CloudFormation)</li>
+        <li>Observability & Runtime Security (Falco, Datadog, Prometheus)</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:georges@example.com">georges@example.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/georgesfk">linkedin.com/in/georgesfk</a></p>
+      <p>GitHub: <a href="https://github.com/georgesfk">github.com/georgesfk</a></p>
     </section>
   </main>
 
   <footer>
-    <p>Connect with me: <a href="https://www.linkedin.com/in/georgesfk">LinkedIn</a> | <a href="https://github.com/georgesfk">GitHub</a></p>
+    <p>© 2026 Georges FK | DevSecOps Portfolio</p>
   </footer>
 </body>
 </html>
