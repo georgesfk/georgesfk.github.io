@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Georges FK | DevSecOps Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
@@ -12,25 +13,27 @@
       <h1>Georges FK</h1>
       <p>Senior DevSecOps Engineer & Consultant</p>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="articles.html">Articles</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html"><i class="fa fa-home"></i> Home</a>
+        <a href="projects.html"><i class="fa fa-code"></i> Projects</a>
+        <a href="articles.html"><i class="fa fa-newspaper"></i> Articles</a>
+        <a href="#skills"><i class="fa fa-cogs"></i> Skills</a>
+        <a href="#contact"><i class="fa fa-envelope"></i> Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
     <section class="hero">
       <h2>Building Secure Cloud-Native Platforms & DevSecOps Pipelines</h2>
-      <p>Automation, Policy as Code, Kubernetes Security, Supply Chain Security & CI/CD.</p>
+      <p>Automation • Policy as Code • Kubernetes Security • Supply Chain Security • CI/CD</p>
+      <div class="hero-buttons">
+        <a href="projects.html" class="btn">See Projects</a>
+        <a href="articles.html" class="btn btn-secondary">Read Articles</a>
+      </div>
     </section>
 
-    <!-- Projects -->
     <section id="projects">
-      <h2>Featured Projects</h2>
+      <h2><i class="fa fa-code"></i> Featured Projects</h2>
       <div class="card-container">
         <div class="card">
           <h3>CI/CD Pipeline Automation</h3>
@@ -47,36 +50,36 @@
       </div>
     </section>
 
-    <!-- Articles -->
     <section id="articles">
-      <h2>Articles</h2>
-      <ul>
-        <li><a href="https://www.linkedin.com/pulse/devsecops-2025-trends-georgesfk">DevSecOps 2025: Trends & Innovations</a></li>
-        <li><a href="https://medium.com/@georgesfk/policy-as-code-opa-kyverno-123456">Policy as Code with OPA & Kyverno</a></li>
-        <li><a href="https://medium.com/@georgesfk/securing-software-supply-chain-789abc">Securing the Software Supply Chain</a></li>
+      <h2><i class="fa fa-newspaper"></i> Latest Articles</h2>
+      <ul class="article-list">
+        <li><a href="https://www.linkedin.com/pulse/devsecops-2025-trends-georgesfk"><i class="fa fa-link"></i> DevSecOps 2025: Trends & Innovations</a></li>
+        <li><a href="https://medium.com/@georgesfk/policy-as-code-opa-kyverno-123456"><i class="fa fa-link"></i> Policy as Code with OPA & Kyverno</a></li>
+        <li><a href="https://medium.com/@georgesfk/securing-software-supply-chain-789abc"><i class="fa fa-link"></i> Securing the Software Supply Chain</a></li>
       </ul>
     </section>
 
-    <!-- Skills -->
     <section id="skills">
-      <h2>DevSecOps Skills</h2>
-      <ul class="skills-list">
-        <li>CI/CD Pipelines (GitHub Actions, Jenkins, GitLab CI)</li>
-        <li>Kubernetes Security & Hardening</li>
-        <li>Policy as Code (OPA, Kyverno)</li>
-        <li>Cloud Security (AWS, GCP, Azure)</li>
-        <li>Supply Chain Security (SBOM, Sigstore, SLSA)</li>
-        <li>Infrastructure as Code (Terraform, CloudFormation)</li>
-        <li>Observability & Runtime Security (Falco, Datadog, Prometheus)</li>
-      </ul>
+      <h2><i class="fa fa-cogs"></i> DevSecOps Skills</h2>
+      <div class="skills-badges">
+        <span class="badge">CI/CD</span>
+        <span class="badge">Kubernetes Security</span>
+        <span class="badge">Policy as Code</span>
+        <span class="badge">Cloud Security</span>
+        <span class="badge">SBOM & Supply Chain</span>
+        <span class="badge">Terraform</span>
+        <span class="badge">Falco & Runtime Security</span>
+      </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
-      <h2>Contact Me</h2>
+      <h2><i class="fa fa-envelope"></i> Contact Me</h2>
       <p>Email: <a href="mailto:georges@example.com">georges@example.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/georgesfk">linkedin.com/in/georgesfk</a></p>
-      <p>GitHub: <a href="https://github.com/georgesfk">github.com/georgesfk</a></p>
+      <div class="contact-buttons">
+        <a href="https://www.linkedin.com/in/georgesfk" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/georgesfk" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://medium.com/@georgesfk" class="btn btn-secondary"><i class="fab fa-medium"></i> Medium</a>
+      </div>
     </section>
   </main>
 
