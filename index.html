@@ -81,8 +81,37 @@
         and SOC automation aligned with MITRE ATT&CK.
       </p>
 
-      <div class="grid">
+      <!-- Diagram Flow -->
+      <div class="devsecops-diagram">
+        <div class="flow-step">
+          <div class="step-title">CI/CD Pipeline</div>
+          <div class="step-content">
+            SAST / SCA / Secrets Detection<br>
+            Pipeline Gates / Signed Images
+          </div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="flow-step">
+          <div class="step-title">Kubernetes Runtime</div>
+          <div class="step-content">
+            OPA / Kyverno<br>
+            RBAC & Network Policies<br>
+            Falco Monitoring
+          </div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="flow-step">
+          <div class="step-title">SOC & SOAR</div>
+          <div class="step-content">
+            Alerts → Runbooks<br>
+            Automated Containment<br>
+            Forensic Logging
+          </div>
+        </div>
+      </div>
 
+      <!-- DevSecOps Cards -->
+      <div class="grid">
         <div class="card">
           <h3>CI/CD Security (Shift Left)</h3>
           <ul>
@@ -146,7 +175,6 @@
             <li>Defense in depth</li>
           </ul>
         </div>
-
       </div>
     </section>
     <!-- ======================================== -->
