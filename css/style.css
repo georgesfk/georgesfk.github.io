@@ -1,165 +1,7 @@
 /* ===== EXISTING STYLES KEPT ===== */
 
-/* Base */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background-color: #f4f6f8;
-  color: #333;
-}
-
-/* Header */
-header {
-  background-color: #1f2937;
-  color: #fff;
-  padding: 20px 0;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-  text-align: center;
-}
-
-header p {
-  text-align: center;
-  margin: 5px 0 15px;
-}
-
-header nav {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-header nav a {
-  color: #fff;
-  margin: 0 12px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-
-/* Hero */
-.hero {
-  text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(to right, #3b82f6, #06b6d4);
-  color: #fff;
-  border-radius: 8px;
-  margin: 20px;
-}
-
-.hero h2 {
-  margin-bottom: 15px;
-  font-size: 2rem;
-}
-
-.hero-buttons .btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  background-color: #1f2937;
-  color: #fff;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.hero-buttons .btn-secondary {
-  background-color: #3b82f6;
-}
-
-.hero-buttons .btn:hover {
-  opacity: 0.9;
-}
-
-/* Sections */
-section {
-  margin: 40px 20px;
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-around;
-}
-
-.card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  flex: 1 1 250px;
-}
-
-.article-list li {
-  margin: 10px 0;
-}
-
-.article-list a {
-  color: #3b82f6;
-  text-decoration: none;
-}
-
-.article-list a:hover {
-  text-decoration: underline;
-}
-
-/* Skills */
-.skills-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.badge {
-  background-color: #3b82f6;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-}
-
-/* Contact buttons */
-.contact-buttons a {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 15px;
-  text-decoration: none;
-  border-radius: 5px;
-  color: #fff;
-  font-weight: bold;
-}
-
-.contact-buttons a.btn {
-  background-color: #0a66c2;
-}
-
-.contact-buttons a.btn-secondary {
-  background-color: #333;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #1f2937;
-  color: #fff;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .card-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+/* Base, Header, Hero, Sections, Cards, Skills, Contact, Footer, Responsive */
+/* ... ton CSS actuel ici ... */
 
 /* ===== NEW STYLES FOR DEVSECOPS ARCHITECTURE SECTION ===== */
 
@@ -217,9 +59,62 @@ footer {
   font-size: 0.95rem;
 }
 
-/* Responsive for DevSecOps grid */
+/* ===== DevSecOps Diagram ===== */
+.devsecops-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+  gap: 20px;
+}
+
+.flow-step {
+  background: #3b82f6;
+  color: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  min-width: 200px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flow-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.step-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.step-content {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.arrow {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin: 0 10px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .devsecops .grid {
     grid-template-columns: 1fr;
+  }
+
+  .devsecops-diagram {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .arrow {
+    display: none;
   }
 }
