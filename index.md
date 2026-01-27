@@ -20,6 +20,6 @@ I design **secure cloud-native applications** with CI/CD pipelines, Policy as Co
 - SBOM, Sigstore, SLSA
 
 ## Contact
-- Email: [georges@example.com](mailto:georges@example.com)
-- LinkedIn: [linkedin.com/in/georgesfk](https://www.linkedin.com/in/georgesfk)
+- Email: [georgeskanan@gmail.com](mailto:georgeskanan@gmail.com)
+- LinkedIn: [linkedin.com/in/georges-kanaan](https://www.linkedin.com/in/georges-kanaan)
 - GitHub: [github.com/georgesfk](https://github.com/georgesfk)
