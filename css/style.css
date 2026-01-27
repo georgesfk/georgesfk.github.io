@@ -104,25 +104,35 @@ section {
 }
 
 /* Contact buttons */
+/* Contact buttons with official brand colors and logos */
 .contact-buttons a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   margin: 5px 5px 0 0;
   padding: 10px 15px;
   text-decoration: none;
   border-radius: 5px;
-  color: #fff; /* texte blanc sur boutons colorés */
+  color: #fff; /* texte blanc pour contraste sur fond coloré */
   font-weight: bold;
-  transition: 0.3s;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.contact-buttons a.linkedin { background-color: #0a66c2; }
-.contact-buttons a.github { background-color: #24292f; }
-.contact-buttons a.medium { background-color: #00ab6c; }
+.contact-buttons a i {
+  font-size: 1.2rem;
+}
 
+/* Brand colors */
+.contact-buttons a.linkedin { background-color: #0A66C2; } /* LinkedIn Blue */
+.contact-buttons a.github   { background-color: #181717; } /* GitHub Black */
+.contact-buttons a.medium   { background-color: #00ab6c; } /* Medium Green */
+
+/* Hover effect */
 .contact-buttons a:hover {
-  opacity: 0.85;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-
 /* DevSecOps Diagram */
 .devsecops-diagram {
   display: flex;
