@@ -145,6 +145,7 @@ section {
 }
 
 /* Contact buttons */
+/* Contact buttons with platform colors */
 .contact-buttons a {
   display: inline-block;
   margin: 5px 5px 0 0;
@@ -156,12 +157,21 @@ section {
   transition: 0.3s;
 }
 
-.contact-buttons a.btn:hover {
-  background-color: #3b82f6;
+.contact-buttons a.linkedin {
+  background-color: #0a66c2; /* LinkedIn Blue */
 }
 
-.contact-buttons a.btn-secondary:hover {
-  background-color: #06b6d4;
+.contact-buttons a.github {
+  background-color: #24292f; /* GitHub Dark Gray */
+}
+
+.contact-buttons a.medium {
+  background-color: #00ab6c; /* Medium Green */
+}
+
+/* Hover effects */
+.contact-buttons a:hover {
+  opacity: 0.85;
 }
 
 /* Footer */
