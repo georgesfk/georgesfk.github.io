@@ -53,8 +53,7 @@
     <section id="articles">
       <h2><i class="fa fa-newspaper"></i> Latest Articles</h2>
       <ul class="article-list">
-       <li>
-        <a href="https://www.linkedin.com/in/georges-kanaan-a8a55b329/"><i class="fa fa-link"></i> DevSecOps 2025: Trends & Innovations</a></li>
+        <li><a href="https://www.linkedin.com/in/georges-kanaan-a8a55b329/"><i class="fa fa-link"></i> DevSecOps 2025: Trends & Innovations</a></li>
         <li><a href="https://github.com/georgesfk/policy-as-code-opa-kyverno-123456"><i class="fa fa-link"></i> Policy as Code with OPA & Kyverno</a></li>
         <li><a href="https://medium.com/@georgeskanan"><i class="fa fa-link"></i> Securing the Software Supply Chain</a></li>
       </ul>
@@ -73,6 +72,85 @@
       </div>
     </section>
 
+    <!-- ===== DevSecOps Architecture Deep-Dive ===== -->
+    <section class="devsecops">
+      <h2>DevSecOps Architecture – CI/CD → Runtime → SOC</h2>
+
+      <p class="intro">
+        End-to-end production DevSecOps architecture integrating CI/CD security, Kubernetes runtime defense,
+        and SOC automation aligned with MITRE ATT&CK.
+      </p>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>CI/CD Security (Shift Left)</h3>
+          <ul>
+            <li>Semgrep (SAST – OWASP/CWE)</li>
+            <li>Gitleaks (Secrets detection)</li>
+            <li>Trivy (Images + IaC scanning)</li>
+            <li>Pipeline security gates</li>
+            <li>Signed container images</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Kubernetes Governance</h3>
+          <ul>
+            <li>OPA Gatekeeper / Kyverno</li>
+            <li>Pod Security Standards (restricted)</li>
+            <li>RBAC least privilege</li>
+            <li>Network Policies</li>
+            <li>securityContext hardening</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Runtime Detection</h3>
+          <ul>
+            <li>Falco syscall monitoring</li>
+            <li>Container escape detection</li>
+            <li>Privilege escalation alerts</li>
+            <li>Lateral movement detection</li>
+            <li>Crypto-mining prevention</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Observability</h3>
+          <ul>
+            <li>Prometheus metrics</li>
+            <li>Alertmanager routing</li>
+            <li>Grafana dashboards</li>
+            <li>Centralized logging</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>SOC + SOAR</h3>
+          <ul>
+            <li>SOC runbooks</li>
+            <li>SOAR playbooks</li>
+            <li>Automated pod isolation</li>
+            <li>Network containment</li>
+            <li>Evidence collection</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Zero Trust Model</h3>
+          <ul>
+            <li>Workload identity</li>
+            <li>mTLS</li>
+            <li>Continuous authorization</li>
+            <li>Defense in depth</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+    <!-- ======================================== -->
+
     <section id="contact">
       <h2><i class="fa fa-envelope"></i> Contact Me</h2>
       <p>Email: <a href="mailto:georgeskanan@gmail.com">georgeskanan@gmail.com</a></p>
@@ -85,7 +163,7 @@
   </main>
 
   <footer>
-    <p>© 2026 Georges F Kanaan| DevSecOps Portfolio</p>
+    <p>© 2026 Georges F Kanaan | DevSecOps Portfolio</p>
   </footer>
 </body>
 </html>
