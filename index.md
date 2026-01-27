@@ -23,3 +23,4 @@ I design **secure cloud-native applications** with CI/CD pipelines, Policy as Co
 - Email: [georgeskanan@gmail.com](mailto:georgeskanan@gmail.com)
 - LinkedIn: [linkedin.com/in/georges-kanaan](https://www.linkedin.com/in/georges-kanaan)
 - GitHub: [github.com/georgesfk](https://github.com/georgesfk)
+- Medium: [medium.com/@georgeskanan](https://medium.com/@georgeskanan)
