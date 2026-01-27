@@ -34,8 +34,8 @@ header nav a {
 }
 
 header nav a:hover {
-  text-decoration: underline;
   color: #3b82f6;
+  text-decoration: underline;
 }
 
 /* Hero */
@@ -67,7 +67,6 @@ header nav a:hover {
 
 .hero-buttons .btn:hover {
   background-color: #3b82f6;
-  color: #fff;
 }
 
 .hero-buttons .btn-secondary {
@@ -91,7 +90,7 @@ section {
 }
 
 .card {
-  background: #fff;
+  background: #cce6ff; /* bleu clair */
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -106,7 +105,7 @@ section {
 
 .card h3 {
   margin-bottom: 10px;
-  color: #3b82f6;
+  color: #0a66c2;
 }
 
 /* Articles */
@@ -115,7 +114,7 @@ section {
 }
 
 .article-list a {
-  color: #3b82f6;
+  color: #0a66c2;
   text-decoration: none;
   transition: 0.2s;
 }
@@ -148,7 +147,7 @@ section {
 /* Contact buttons */
 .contact-buttons a {
   display: inline-block;
-  margin: 10px;
+  margin: 5px 5px 0 0;
   padding: 10px 15px;
   text-decoration: none;
   border-radius: 5px;
@@ -222,9 +221,47 @@ footer {
   transform: scale(1.2);
 }
 
+/* Footer grid */
+.footer-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 20px;
+}
+
+.footer-card {
+  background-color: #cce6ff;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1 1 300px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.footer-card h2 {
+  color: #0a66c2;
+  margin-bottom: 10px;
+}
+
+.footer-card a {
+  color: #0a66c2;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footer-card a:hover {
+  text-decoration: underline;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-  .card-container, .grid {
+  .card-container, .grid, .footer-grid {
     flex-direction: column;
     align-items: center;
   }
