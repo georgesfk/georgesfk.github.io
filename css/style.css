@@ -30,10 +30,12 @@ header nav a {
   margin: 0 12px;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.2s;
 }
 
 header nav a:hover {
   text-decoration: underline;
+  color: #3b82f6;
 }
 
 /* Hero */
@@ -60,14 +62,20 @@ header nav a:hover {
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
-}
-
-.hero-buttons .btn-secondary {
-  background-color: #3b82f6;
+  transition: 0.3s;
 }
 
 .hero-buttons .btn:hover {
-  opacity: 0.9;
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.hero-buttons .btn-secondary {
+  background-color: #06b6d4;
+}
+
+.hero-buttons .btn-secondary:hover {
+  background-color: #3b82f6;
 }
 
 /* Sections */
@@ -88,11 +96,12 @@ section {
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   flex: 1 1 250px;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
 .card h3 {
@@ -100,6 +109,7 @@ section {
   color: #3b82f6;
 }
 
+/* Articles */
 .article-list li {
   margin: 10px 0;
 }
@@ -107,6 +117,7 @@ section {
 .article-list a {
   color: #3b82f6;
   text-decoration: none;
+  transition: 0.2s;
 }
 
 .article-list a:hover {
@@ -126,6 +137,12 @@ section {
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.badge:hover {
+  background-color: #06b6d4;
+  cursor: pointer;
 }
 
 /* Contact buttons */
@@ -137,14 +154,15 @@ section {
   border-radius: 5px;
   color: #fff;
   font-weight: bold;
+  transition: 0.3s;
 }
 
-.contact-buttons a.btn {
-  background-color: #0a66c2;
+.contact-buttons a.btn:hover {
+  background-color: #3b82f6;
 }
 
-.contact-buttons a.btn-secondary {
-  background-color: #333;
+.contact-buttons a.btn-secondary:hover {
+  background-color: #06b6d4;
 }
 
 /* Footer */
@@ -173,12 +191,12 @@ footer {
   min-width: 200px;
   text-align: center;
   box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .flow-step:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
 }
 
 .step-title {
@@ -197,6 +215,11 @@ footer {
   font-weight: bold;
   color: #1f2937;
   margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
 }
 
 /* Responsive */
