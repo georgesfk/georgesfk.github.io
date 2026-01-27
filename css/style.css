@@ -57,12 +57,15 @@ header nav a:hover {
   display: inline-block;
   margin: 10px;
   padding: 10px 20px;
-  background-color: #1f2937;
-  color: #fff;
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
+  color: #fff;
+}
+
+.hero-buttons .btn {
+  background-color: #1f2937;
 }
 
 .hero-buttons .btn:hover {
@@ -82,14 +85,14 @@ section {
   margin: 40px 20px;
 }
 
-.card-container, .grid {
+.card-container, .grid, .footer-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
 }
 
-.card {
+.card, .footer-card {
   background: #cce6ff; /* bleu clair */
   padding: 20px;
   border-radius: 12px;
@@ -98,12 +101,12 @@ section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.card:hover, .footer-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
-.card h3 {
+.card h3, .footer-card h2 {
   margin-bottom: 10px;
   color: #0a66c2;
 }
@@ -145,7 +148,6 @@ section {
 }
 
 /* Contact buttons */
-/* Contact buttons with platform colors */
 .contact-buttons a {
   display: inline-block;
   margin: 5px 5px 0 0;
@@ -157,29 +159,12 @@ section {
   transition: 0.3s;
 }
 
-.contact-buttons a.linkedin {
-  background-color: #0a66c2; /* LinkedIn Blue */
-}
+.contact-buttons a.linkedin { background-color: #0a66c2; }
+.contact-buttons a.github { background-color: #24292f; }
+.contact-buttons a.medium { background-color: #00ab6c; }
 
-.contact-buttons a.github {
-  background-color: #24292f; /* GitHub Dark Gray */
-}
-
-.contact-buttons a.medium {
-  background-color: #00ab6c; /* Medium Green */
-}
-
-/* Hover effects */
 .contact-buttons a:hover {
   opacity: 0.85;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #1f2937;
-  color: #fff;
 }
 
 /* DevSecOps Diagram */
@@ -231,42 +216,12 @@ footer {
   transform: scale(1.2);
 }
 
-/* Footer grid */
-.footer-grid {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 40px 20px;
-}
-
-.footer-card {
-  background-color: #cce6ff;
-  padding: 20px;
-  border-radius: 12px;
-  flex: 1 1 300px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.footer-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-}
-
-.footer-card h2 {
-  color: #0a66c2;
-  margin-bottom: 10px;
-}
-
-.footer-card a {
-  color: #0a66c2;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.footer-card a:hover {
-  text-decoration: underline;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #1f2937;
+  color: #fff;
 }
 
 /* Responsive */
