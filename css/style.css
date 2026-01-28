@@ -1,25 +1,25 @@
 /* ================= BASE ================= */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #f4f6f8;
+  background: #f4f6f8;
   color: #333;
 }
 
 /* ================= HEADER ================= */
 
 header {
-  background-color: #1f2937;
+  background: #1f2937;
   color: #fff;
   padding: 20px 0;
   text-align: center;
-}
-
-header h1, header p {
-  color: #fff;
 }
 
 header nav a {
@@ -27,12 +27,10 @@ header nav a {
   margin: 0 12px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.2s;
 }
 
 header nav a:hover {
   color: #3b82f6;
-  text-decoration: underline;
 }
 
 /* ================= HERO ================= */
@@ -46,69 +44,70 @@ header nav a:hover {
   margin: 20px;
 }
 
-.hero-buttons .btn,
-.hero-buttons .btn-secondary {
-  color: #fff;
-}
-
-/* ================= SECTIONS ================= */
+/* ================= LAYOUT ================= */
 
 section {
   margin: 40px 20px;
 }
 
-.card-container, .grid, .footer-grid {
+.card-container,
+.grid,
+.footer-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  perspective: 1000px;
+  perspective: 1200px;
 }
 
 /* ================= CARDS 3D ================= */
 
-.card, .footer-card {
+.card,
+.footer-card {
   background: #cce6ff;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 14px;
   flex: 1 1 250px;
-  color: #000;
+  max-width: 320px;
   position: relative;
 
   transform-style: preserve-3d;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backface-visibility: hidden;
+  will-change: transform;
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform .4s ease, box-shadow .4s ease;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,.2);
 }
 
-/* Shine layer */
+/* shine */
 
 .card::before,
 .footer-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  background: linear-gradient(120deg, rgba(255,255,255,0.4), transparent 60%);
-  opacity: 0;
-  transition: opacity 0.3s;
-  pointer-events: none;
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:14px;
+  background:linear-gradient(130deg,rgba(255,255,255,.5),transparent 60%);
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
 }
 
-/* Hover 3D */
+/* hover */
 
 .card:hover,
 .footer-card:hover {
-  transform: rotateX(10deg) rotateY(-10deg) translateY(-12px) scale(1.03);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+  transform: rotateX(18deg) rotateY(-18deg) translateY(-20px) scale(1.06);
+  box-shadow:0 30px 60px rgba(0,0,0,.35);
 }
 
 .card:hover::before,
 .footer-card:hover::before {
-  opacity: 1;
+  opacity:1;
 }
 
-/* Depth content */
+/* depth */
 
 .card h3,
 .card p,
@@ -121,134 +120,101 @@ section {
 
 .card h3,
 .footer-card h2 {
-  margin-bottom: 10px;
-  color: #000;
+  margin-bottom:10px;
 }
 
-.card ul li,
-.step-content,
-.article-list a,
-.skills-badges .badge {
-  color: #000;
+.article-list a {
+  text-decoration:none;
+  color:black;
 }
 
-/* ================= ARTICLES ================= */
-
-.article-list li a {
-  text-decoration: none;
-  transition: 0.2s;
+.article-list a:hover {
+  text-decoration:underline;
 }
 
-.article-list li a:hover {
-  text-decoration: underline;
-}
-
-/* ================= SKILLS ================= */
+/* ================= BADGES ================= */
 
 .skills-badges .badge {
-  background-color: #3b82f6;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  transition: 0.3s;
+  background:#3b82f6;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:.9rem;
+  margin:4px;
+  display:inline-block;
 }
 
 .badge:hover {
-  background-color: #06b6d4;
-  cursor: pointer;
+  background:#06b6d4;
 }
 
 /* ================= CONTACT ================= */
 
 .contact-buttons a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin: 5px 5px 0 0;
-  padding: 10px 15px;
-  text-decoration: none;
-  border-radius: 5px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: transform 0.2s, box-shadow 0.2s;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin:5px;
+  padding:10px 15px;
+  border-radius:6px;
+  color:#fff;
+  text-decoration:none;
 }
 
-.contact-buttons a i {
-  font-size: 1.2rem;
-}
-
-.contact-buttons a.linkedin { background-color: #0A66C2; }
-.contact-buttons a.github   { background-color: #181717; }
-.contact-buttons a.medium   { background-color: #00ab6c; }
-
-.contact-buttons a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
+.linkedin{background:#0A66C2}
+.github{background:#181717}
+.medium{background:#00ab6c}
 
 /* ================= DEVSECOPS ================= */
 
 .devsecops-diagram {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 40px 0;
-  gap: 20px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
 }
 
 .flow-step {
-  background: #3b82f6;
-  color: #fff;
-  padding: 20px 25px;
-  border-radius: 12px;
-  min-width: 200px;
-  text-align: center;
-
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background:#3b82f6;
+  color:white;
+  padding:20px;
+  border-radius:12px;
+  transition:.3s;
 }
 
 .flow-step:hover {
-  transform: translateY(-6px) scale(1.05);
+  transform:translateY(-6px) scale(1.05);
 }
 
 .arrow {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #1f2937;
+  font-size:2rem;
 }
 
 /* ================= FOOTER ================= */
 
 footer {
-  text-align: center;
-  padding: 15px;
-  background: #1f2937;
-  color: #fff;
+  background:#1f2937;
+  color:white;
+  text-align:center;
+  padding:15px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= MOBILE ================= */
 
-@media (max-width: 768px) {
+@media(max-width:768px){
 
-  .card-container, .grid, .footer-grid {
-    flex-direction: column;
-    align-items: center;
+  .card-container,
+  .grid,
+  .footer-grid {
+    flex-direction:column;
+    align-items:center;
   }
 
-  .devsecops-diagram {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .arrow {
-    display: none;
+  .arrow{
+    display:none;
   }
 
   .card:hover,
-  .footer-card:hover {
-    transform: translateY(-8px);
+  .footer-card:hover{
+    transform:translateY(-10px) scale(1.03);
   }
 }
