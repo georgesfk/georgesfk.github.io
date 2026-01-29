@@ -1,15 +1,16 @@
-/* ================= BASE ================= */
+/* ================= RESET / BASE ================= */
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  line-height: 1.6;
   background: #f4f6f8;
   color: #333;
+  line-height: 1.6;
 }
 
 /* ================= HEADER ================= */
@@ -17,7 +18,7 @@ body {
 header {
   background: #1f2937;
   color: #fff;
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
 }
 
@@ -41,6 +42,25 @@ header nav a:hover {
   color: #fff;
   border-radius: 8px;
   margin: 20px;
+}
+
+.hero-buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  background: #3b82f6;
+  transition: 0.3s;
+}
+
+.hero-buttons a.btn-secondary {
+  background: #06b6d4;
+}
+
+.hero-buttons a:hover {
+  opacity: 0.85;
 }
 
 /* ================= LAYOUT ================= */
@@ -67,25 +87,32 @@ section {
   padding: 25px;
   border-radius: 14px;
   position: relative;
+
   transform-style: preserve-3d;
   backface-visibility: hidden;
   will-change: transform;
-  transition: .35s ease;
+
+  transition: 0.35s ease;
   box-shadow: 0 10px 25px rgba(0,0,0,.2);
+
   -webkit-tap-highlight-color: transparent;
 }
 
-/* largeur des cards */
+/* Normal cards */
 .card {
-  width: 280px; /* normale */
+  width: 280px;
+  flex: 1 1 280px;
 }
 
+/* Footer cards: responsive full width */
 .footer-card {
-  flex: 1 1 45%; /* full width en desktop */
-  max-width: none; /* supprime les limites */
+  flex: 1 1 45%;
+  margin: 10px;
+  min-width: 280px;
+  max-width: none;
 }
 
-/* shine */
+/* ================= SHINE EFFECT ================= */
 
 .card::before,
 .footer-card::before {
@@ -96,10 +123,10 @@ section {
   background: linear-gradient(130deg, rgba(255,255,255,.5), transparent 60%);
   opacity: 0;
   pointer-events: none;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-/* profondeur du texte */
+/* ================= DEPTH ================= */
 
 .card h3,
 .card p,
@@ -108,7 +135,7 @@ section {
   transform: translateZ(35px);
 }
 
-/* ================= UNIVERSAL EFFECT ================= */
+/* ================= UNIVERSAL 3D EFFECT ================= */
 
 .card:hover,
 .card:active,
@@ -131,6 +158,11 @@ section {
 
 /* ================= TEXT ================= */
 
+.card h3,
+.footer-card h2 {
+  margin-bottom: 10px;
+}
+
 .article-list a {
   text-decoration: none;
   color: black;
@@ -146,12 +178,13 @@ section {
   background: #3b82f6;
   padding: 6px 12px;
   border-radius: 20px;
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin: 4px;
   display: inline-block;
+  transition: 0.3s;
 }
 
-.badge:hover {
+.skills-badges .badge:hover {
   background: #06b6d4;
 }
 
@@ -166,13 +199,18 @@ section {
   border-radius: 6px;
   color: #fff;
   text-decoration: none;
+  transition: 0.3s;
 }
 
-.linkedin { background:#0A66C2 }
-.github { background:#181717 }
-.medium { background:#00ab6c }
+.contact-buttons a.linkedin { background:#0A66C2 }
+.contact-buttons a.github { background:#181717 }
+.contact-buttons a.medium { background:#00ab6c }
 
-/* ================= DEVSECOPS ================= */
+.contact-buttons a:hover {
+  opacity: 0.85;
+}
+
+/* ================= DEVSECOPS DIAGRAM ================= */
 
 .devsecops-diagram {
   display: flex;
@@ -186,7 +224,7 @@ section {
   color: white;
   padding: 20px;
   border-radius: 12px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .flow-step:hover {
@@ -206,7 +244,7 @@ footer {
   padding: 15px;
 }
 
-/* ================= MOBILE ================= */
+/* ================= MOBILE RESPONSIVE ================= */
 
 @media (max-width:768px) {
 
@@ -218,10 +256,12 @@ footer {
   }
 
   .footer-card {
-    flex: 1 1 100%; /* full width sur mobile */
+    flex: 1 1 100%;
+    margin: 10px 0;
   }
 
   .arrow {
     display: none;
   }
+
 }
