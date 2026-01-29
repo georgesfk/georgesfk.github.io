@@ -7,7 +7,6 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
   line-height: 1.6;
   background: #f4f6f8;
   color: #333;
@@ -75,36 +74,24 @@ section {
   backface-visibility: hidden;
   will-change: transform;
 
-  transition: transform .4s ease, box-shadow .4s ease;
-
+  transition: .35s ease;
   box-shadow: 0 10px 25px rgba(0,0,0,.2);
+
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* shine */
 
 .card::before,
 .footer-card::before {
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius:14px;
-  background:linear-gradient(130deg,rgba(255,255,255,.5),transparent 60%);
-  opacity:0;
-  pointer-events:none;
-  transition:.3s;
-}
-
-/* hover */
-
-.card:hover,
-.footer-card:hover {
-  transform: rotateX(18deg) rotateY(-18deg) translateY(-20px) scale(1.06);
-  box-shadow:0 30px 60px rgba(0,0,0,.35);
-}
-
-.card:hover::before,
-.footer-card:hover::before {
-  opacity:1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: linear-gradient(130deg, rgba(255,255,255,.5), transparent 60%);
+  opacity: 0;
+  pointer-events: none;
+  transition: .3s;
 }
 
 /* depth */
@@ -116,105 +103,122 @@ section {
   transform: translateZ(35px);
 }
 
+/* ================= UNIVERSAL 3D EFFECT ================= */
+
+.card:hover,
+.card:active,
+.card:focus-visible,
+.footer-card:hover,
+.footer-card:active,
+.footer-card:focus-visible {
+  transform: rotateX(18deg) rotateY(-18deg) translateY(-20px) scale(1.06);
+  box-shadow: 0 30px 60px rgba(0,0,0,.35);
+}
+
+.card:hover::before,
+.card:active::before,
+.card:focus-visible::before,
+.footer-card:hover::before,
+.footer-card:active::before,
+.footer-card:focus-visible::before {
+  opacity: 1;
+}
+
 /* ================= TEXT ================= */
 
 .card h3,
 .footer-card h2 {
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 
 .article-list a {
-  text-decoration:none;
-  color:black;
+  text-decoration: none;
+  color: black;
 }
 
 .article-list a:hover {
-  text-decoration:underline;
+  text-decoration: underline;
 }
 
 /* ================= BADGES ================= */
 
 .skills-badges .badge {
-  background:#3b82f6;
-  padding:6px 12px;
-  border-radius:20px;
-  font-size:.9rem;
-  margin:4px;
-  display:inline-block;
+  background: #3b82f6;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: .9rem;
+  margin: 4px;
+  display: inline-block;
 }
 
 .badge:hover {
-  background:#06b6d4;
+  background: #06b6d4;
 }
 
 /* ================= CONTACT ================= */
 
 .contact-buttons a {
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  margin:5px;
-  padding:10px 15px;
-  border-radius:6px;
-  color:#fff;
-  text-decoration:none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
 }
 
-.linkedin{background:#0A66C2}
-.github{background:#181717}
-.medium{background:#00ab6c}
+.linkedin { background:#0A66C2 }
+.github { background:#181717 }
+.medium { background:#00ab6c }
 
 /* ================= DEVSECOPS ================= */
 
 .devsecops-diagram {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .flow-step {
-  background:#3b82f6;
-  color:white;
-  padding:20px;
-  border-radius:12px;
-  transition:.3s;
+  background: #3b82f6;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  transition: .3s;
 }
 
 .flow-step:hover {
-  transform:translateY(-6px) scale(1.05);
+  transform: translateY(-6px) scale(1.05);
 }
 
 .arrow {
-  font-size:2rem;
+  font-size: 2rem;
 }
 
 /* ================= FOOTER ================= */
 
 footer {
-  background:#1f2937;
-  color:white;
-  text-align:center;
-  padding:15px;
+  background: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
 
 /* ================= MOBILE ================= */
 
-@media(max-width:768px){
+@media (max-width:768px) {
 
   .card-container,
   .grid,
   .footer-grid {
-    flex-direction:column;
-    align-items:center;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .arrow{
-    display:none;
+  .arrow {
+    display: none;
   }
 
-  .card:hover,
-  .footer-card:hover{
-    transform:translateY(-10px) scale(1.03);
-  }
 }
