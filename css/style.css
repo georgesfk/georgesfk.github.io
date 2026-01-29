@@ -1,15 +1,15 @@
-/* ================= BASE ================= */
+/* ================= RESET / BASE ================= */
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  line-height: 1.6;
+  font-family: Arial, sans-serif;
   background: #f4f6f8;
   color: #333;
+  line-height: 1.6;
 }
 
 /* ================= HEADER ================= */
@@ -17,7 +17,7 @@ body {
 header {
   background: #1f2937;
   color: #fff;
-  padding: 20px 0;
+  padding: 20px;
   text-align: center;
 }
 
@@ -59,15 +59,13 @@ section {
   perspective: 1200px;
 }
 
-/* ================= CARDS 3D ================= */
+/* ================= CARDS ================= */
 
 .card,
 .footer-card {
   background: #cce6ff;
-  padding: 20px;
+  padding: 25px;
   border-radius: 14px;
-  flex: 1 1 250px;
-  max-width: 320px;
   position: relative;
 
   transform-style: preserve-3d;
@@ -78,6 +76,18 @@ section {
   box-shadow: 0 10px 25px rgba(0,0,0,.2);
 
   -webkit-tap-highlight-color: transparent;
+}
+
+/* cards normales */
+
+.card {
+  width: 280px;
+}
+
+/* footer cards FULL WIDTH */
+
+.footer-card {
+  flex: 1 1 45%;
 }
 
 /* shine */
@@ -103,7 +113,7 @@ section {
   transform: translateZ(35px);
 }
 
-/* ================= UNIVERSAL 3D EFFECT ================= */
+/* ================= UNIVERSAL EFFECT (PC + MOBILE) ================= */
 
 .card:hover,
 .card:active,
@@ -125,11 +135,6 @@ section {
 }
 
 /* ================= TEXT ================= */
-
-.card h3,
-.footer-card h2 {
-  margin-bottom: 10px;
-}
 
 .article-list a {
   text-decoration: none;
@@ -217,8 +222,11 @@ footer {
     align-items: center;
   }
 
+  .footer-card {
+    flex: 1 1 100%;
+  }
+
   .arrow {
     display: none;
   }
-
 }
