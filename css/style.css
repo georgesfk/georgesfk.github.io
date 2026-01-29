@@ -1,12 +1,11 @@
-/* ================= RESET / BASE ================= */
+/* ================= BASE ================= */
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
   background: #f4f6f8;
   color: #333;
@@ -18,7 +17,7 @@ body {
 header {
   background: #1f2937;
   color: #fff;
-  padding: 20px 0;
+  padding: 20px;
   text-align: center;
 }
 
@@ -42,25 +41,6 @@ header nav a:hover {
   color: #fff;
   border-radius: 8px;
   margin: 20px;
-}
-
-.hero-buttons a {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #fff;
-  background: #3b82f6;
-  transition: 0.3s;
-}
-
-.hero-buttons a.btn-secondary {
-  background: #06b6d4;
-}
-
-.hero-buttons a:hover {
-  opacity: 0.85;
 }
 
 /* ================= LAYOUT ================= */
@@ -87,12 +67,13 @@ section {
   padding: 25px;
   border-radius: 14px;
   position: relative;
+  overflow: hidden;
 
   transform-style: preserve-3d;
   backface-visibility: hidden;
   will-change: transform;
 
-  transition: 0.35s ease;
+  transition: .35s ease;
   box-shadow: 0 10px 25px rgba(0,0,0,.2);
 
   -webkit-tap-highlight-color: transparent;
@@ -104,11 +85,11 @@ section {
   flex: 1 1 280px;
 }
 
-/* Footer cards: responsive full width */
+/* Footer cards */
 .footer-card {
   flex: 1 1 45%;
-  margin: 10px;
   min-width: 280px;
+  margin: 10px;
   max-width: none;
 }
 
@@ -123,16 +104,30 @@ section {
   background: linear-gradient(130deg, rgba(255,255,255,.5), transparent 60%);
   opacity: 0;
   pointer-events: none;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 /* ================= DEPTH ================= */
 
 .card h3,
+.footer-card h2 {
+  margin-bottom: 10px;
+  transform: translateZ(35px);
+}
+
 .card p,
 .card ul,
-.footer-card h2 {
-  transform: translateZ(35px);
+.footer-card p,
+.footer-card ul {
+  margin: 0 0 10px 0;
+  padding-left: 18px;
+  transform: none;
+}
+
+.card ul li,
+.footer-card ul li {
+  margin-bottom: 6px;
+  line-height: 1.4;
 }
 
 /* ================= UNIVERSAL 3D EFFECT ================= */
@@ -158,11 +153,6 @@ section {
 
 /* ================= TEXT ================= */
 
-.card h3,
-.footer-card h2 {
-  margin-bottom: 10px;
-}
-
 .article-list a {
   text-decoration: none;
   color: black;
@@ -178,13 +168,12 @@ section {
   background: #3b82f6;
   padding: 6px 12px;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-size: .9rem;
   margin: 4px;
   display: inline-block;
-  transition: 0.3s;
 }
 
-.skills-badges .badge:hover {
+.badge:hover {
   background: #06b6d4;
 }
 
@@ -199,18 +188,13 @@ section {
   border-radius: 6px;
   color: #fff;
   text-decoration: none;
-  transition: 0.3s;
 }
 
-.contact-buttons a.linkedin { background:#0A66C2 }
-.contact-buttons a.github { background:#181717 }
-.contact-buttons a.medium { background:#00ab6c }
+.linkedin { background:#0A66C2; }
+.github { background:#181717; }
+.medium { background:#00ab6c; }
 
-.contact-buttons a:hover {
-  opacity: 0.85;
-}
-
-/* ================= DEVSECOPS DIAGRAM ================= */
+/* ================= DEVSECOPS ================= */
 
 .devsecops-diagram {
   display: flex;
@@ -224,7 +208,7 @@ section {
   color: white;
   padding: 20px;
   border-radius: 12px;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .flow-step:hover {
@@ -244,7 +228,7 @@ footer {
   padding: 15px;
 }
 
-/* ================= MOBILE RESPONSIVE ================= */
+/* ================= MOBILE ================= */
 
 @media (max-width:768px) {
 
@@ -257,11 +241,9 @@ footer {
 
   .footer-card {
     flex: 1 1 100%;
-    margin: 10px 0;
   }
 
   .arrow {
     display: none;
   }
-
 }
